@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   listNumber: {
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
   },
 });

@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   secaoRoxa: {
     flex: 2,
     backgroundColor: "#7A4A9E",
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center'
   },
   input: {
@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   form: {
-    width: "80%",
+    justifyContent: 'center',
     flexDirection: "row",
-    marginTop: 18,
-    marginBottom: 36,
-    position: "relative",
-    marginLeft: 24
+    height: 54,
+    paddingLeft: 24,
+    paddingRight: 24,
+    top: -30
   },
   secaoBranca: {
     flex: 7,
