@@ -89,11 +89,13 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 5,
     backgroundColor: '#31C667',
-    height: 52,
+    height: 54,
     width: 52,
     marginLeft: -3,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    borderWidth: 0.5
+    
     },
   buttontxt:{
     margin: 'auto'
