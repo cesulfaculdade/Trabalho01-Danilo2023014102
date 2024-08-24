@@ -1,7 +1,8 @@
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View } from "react-native";
-import CustomListLayout from './CustomListLayout'; 
+import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from "react-native";
+import CustomListLayout from './CustomListLayout';
+import shopping from '../../src/assets/shopping_list.png'
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Home() {
   return (
@@ -17,8 +18,13 @@ export default function Home() {
           placeholderTextColor="#BDBABA"
           keyboardType="default"
         />
-      </View>
 
+          <TouchableOpacity style={styles.button}>
+              <MaterialIcons style={styles.buttontxt} name="add-circle-outline" size={16} color="white" />
+            </TouchableOpacity>
+            
+        </View>
+    
       <View style={styles.secaoBranca}>
         <View style={styles.containerText}>
           <CustomListLayout
@@ -32,6 +38,8 @@ export default function Home() {
             numeros={0}
           />
         </View>
+
+        <Image source={shopping}/>
       </View>
     </View>
   );
@@ -49,13 +57,14 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   input: {
-    flex: 3,
+    flex: 1,
     backgroundColor: "#fff",
-    height: 56,
+    height: 54,
     padding: 16,
     fontSize: 18,
     borderRadius: 5,
     marginRight: 16,
+    borderWidth: 0.5,
   },
   form: {
     justifyContent: 'center',
@@ -76,5 +85,18 @@ const styles = StyleSheet.create({
     color: "#FFF",
     fontSize: 24,
     fontWeight: "bold"
+  },
+  button: {
+    borderRadius: 5,
+    backgroundColor: '#31C667',
+    height: 52,
+    width: 52,
+    marginLeft: -3,
+    justifyContent: "center",
+    alignItems: "center"
+    },
+  buttontxt:{
+    margin: 'auto'
   }
+    
 });
