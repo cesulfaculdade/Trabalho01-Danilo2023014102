@@ -1,20 +1,23 @@
-import { Text, TouchableOpacity, View } from "react-native"; //TouchableOpacity = botão verde
+import { Text, View } from "react-native";
 import { styles } from "./styles";
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import Entypo from '@expo/vector-icons/Entypo';
+
 
 type Props = {
-    name: string;
-    onRemove: () => void;
+    nome: string;
+    onRemove: ()=>void
 }
 
-
-export function Product ({ name, onRemove }: Props) {
+export function Product({  nome, onRemove}: Props) {
     return (
-    <View style={styles.container}>
-        <Text style={styles.name}>{name}</Text>
+        <View style={styles.container} >
+            <Entypo name="circle" size={24} color="#31C667"/>
+            <Text style={styles.text}>
+                {nome}
+            </Text>
+            <MaterialCommunityIcons name="trash-can-outline" size={24} color="black" onPress={onRemove}/>
+        </View>
 
-        <TouchableOpacity style={styles.button} onPress={onRemove}> 
-            <Text style={styles.buttonText}>-</Text>
-        </TouchableOpacity>
-    </View>
     )
 }
