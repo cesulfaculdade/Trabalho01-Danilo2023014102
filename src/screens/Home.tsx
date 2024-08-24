@@ -29,12 +29,10 @@ export default function Home() {
         <View style={styles.containerText}>
           <CustomListLayout
             name={"Produtos"}
-            color="#31C667"
             numeros={0}
           />
           <CustomListLayout
             name={"Finalizados"}
-            color="#7A4A9E"
             numeros={0}
           />
         </View>

@@ -3,13 +3,12 @@ import { View, Text, StyleSheet } from 'react-native';
 
 interface CustomListLayoutProps {
   name: string;
-  color: string;
   numeros: number;
 }
 
-const CustomListLayout: React.FC<CustomListLayoutProps> = ({ name, color, numeros }) => {
+const CustomListLayout: React.FC<CustomListLayoutProps> = ({ name, numeros }) => {
   return (
-    <View style={[styles.listContainer, { backgroundColor: color }]}>
+    <View style={styles.listContainer}>
       <Text style={styles.listText}>{name}</Text>
       <Text style={styles.listNumber}>{numeros}</Text>
     </View>
@@ -26,11 +25,11 @@ const styles = StyleSheet.create({
   },
   listText: {
     fontSize: 18,
-    color: '#fff',
+    color: '#7A4A9E',
   },
   listNumber: {
     fontSize: 18,
-    color: '#fff',
+    color: '#31C667',
     fontWeight: 'bold',
   },
 });
